@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gabriela Cabrera — Comunicación Interna &amp; Cultura Organizacional</title>
+<meta name="description" content="Gabriela Cabrera, profesional en Comunicación Corporativa con más de cuatro años liderando estrategias de Comunicación Interna, Cultura Organizacional y Experiencia del Colaborador." />
+<meta name="author" content="Gabriela Cabrera" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Gabriela Cabrera — Comunicación Interna & Cultura Organizacional" />
+<meta property="og:description" content="Diseño y lidero estrategias que conectan a las personas con el propósito del negocio." />
+<meta property="og:image" content="assets/gabriela-cabrera.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add('js');</script>
+
+<style>
+  :root{
+    --paper:#F7F5F0;
+    --paper-2:#EFEBE1;
+    --ink:#232528;
+    --ink-soft:#4C5158;
+    --muted:#6C7076;
+    --line:#E2DDD1;
+    --accent:#38635C;
+    --accent-deep:#2A4C46;
+    --accent-tint:#E7EEEB;
+    --card:#FFFFFF;
+    --on-accent:#FFFFFF;
+    --shadow:0 1px 2px rgba(35,37,40,.04), 0 14px 34px rgba(35,37,40,.06);
+    /* dark contact/footer band — fixed dark in every theme */
+    --band:#232528;
+    --band-fg:#EFEBE2;
+    --band-fg-dim:#B7BABF;
+    --band-accent:#8FC2B7;
+    --band-line:rgba(255,255,255,.12);
+    --band-tint:rgba(255,255,255,.045);
+    --radius:10px;
+    --maxw:1080px;
+    --serif:"Newsreader", Georgia, "Times New Roman", serif;
+    --sans:"IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono:"IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#161719;
+      --paper-2:#1E2022;
+      --ink:#ECE9E2;
+      --ink-soft:#C4C2BC;
+      --muted:#8A8E94;
+      --line:#2E3134;
+      --accent:#8FC2B7;
+      --accent-deep:#A9D3CA;
+      --accent-tint:#20302C;
+      --card:#1C1E20;
+      --on-accent:#12211E;
+      --band:#0F1012;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 16px 36px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#161719;
+    --paper-2:#1E2022;
+    --ink:#ECE9E2;
+    --ink-soft:#C4C2BC;
+    --muted:#8A8E94;
+    --line:#2E3134;
+    --accent:#8FC2B7;
+    --accent-deep:#A9D3CA;
+    --accent-tint:#20302C;
+    --card:#1C1E20;
+    --on-accent:#12211E;
+    --band:#0F1012;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 16px 36px rgba(0,0,0,.4);
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  h1,h2,h3,h4{font-family:var(--serif); font-weight:400; line-height:1.16; letter-spacing:-.005em; margin:0; text-wrap:balance;}
+  p{margin:0;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    font-weight:500;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin:0 0 20px;
+    display:flex; align-items:center; gap:12px;
+  }
+  .eyebrow::before{content:""; width:26px; height:1px; background:var(--accent); display:inline-block;}
+
+  /* ---------- Header ---------- */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:var(--paper);
+    background:color-mix(in srgb, var(--paper) 85%, transparent);
+    backdrop-filter:saturate(180%) blur(10px);
+    -webkit-backdrop-filter:saturate(180%) blur(10px);
+    border-bottom:1px solid transparent;
+    transition:border-color .3s ease;
+  }
+  header.site.scrolled{ border-bottom-color:var(--line); }
+  .nav{display:flex; align-items:center; justify-content:space-between; height:72px;}
+  .brand{
+    font-family:var(--serif); font-size:20px; font-weight:500; letter-spacing:.01em;
+    text-decoration:none; color:var(--ink);
+  }
+  .brand em{color:var(--accent); font-style:italic;}
+  .nav-links{display:flex; gap:32px; align-items:center;}
+  .nav-links a{
+    text-decoration:none; font-size:14.5px; font-weight:400; color:var(--ink-soft);
+    position:relative; padding:6px 0;
+  }
+  .nav-links a::after{
+    content:""; position:absolute; left:0; right:0; bottom:0; height:1.5px;
+    background:var(--accent); transform:scaleX(0); transform-origin:left; transition:transform .25s ease;
+  }
+  .nav-links a:hover{color:var(--ink);}
+  .nav-links a:hover::after{transform:scaleX(1);}
+  .nav-cta{
+    text-decoration:none; font-size:13.5px; font-weight:500;
+    border:1px solid var(--line); border-radius:999px; padding:9px 18px; color:var(--ink);
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .nav-cta:hover{border-color:var(--accent); background:var(--accent-tint);}
+  .menu-btn{
+    display:none; background:none; border:1px solid var(--line); border-radius:9px;
+    width:42px; height:42px; cursor:pointer; color:var(--ink);
+  }
+  .menu-btn svg{width:20px; height:20px; margin:auto;}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:92px 0 78px;}
+  .hero-grid{display:grid; grid-template-columns:1.4fr .82fr; gap:60px; align-items:center;}
+  .hero h1{font-size:clamp(2.5rem, 5.2vw, 3.9rem); margin:0 0 24px;}
+  .hero h1 em{font-style:italic; color:var(--accent);}
+  .hero .lede{font-size:1.12rem; color:var(--ink-soft); max-width:46ch; margin:0 0 8px;}
+  .hero .role{
+    font-family:var(--mono); font-size:12.5px; font-weight:400; letter-spacing:.06em;
+    color:var(--muted); margin:0 0 28px; text-transform:uppercase;
+  }
+  .hero .role b{color:var(--accent); font-weight:500;}
+  .cta-row{display:flex; flex-wrap:wrap; gap:14px; margin-top:32px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:9px;
+    text-decoration:none; font-weight:500; font-size:14.5px;
+    padding:13px 24px; border-radius:999px; border:1px solid var(--accent);
+    transition:transform .15s ease, background .2s ease, box-shadow .2s ease;
+  }
+  .btn-primary{background:var(--accent); color:var(--on-accent);}
+  .btn-primary:hover{background:var(--accent-deep); box-shadow:var(--shadow); transform:translateY(-1px);}
+  .btn-ghost{background:transparent; color:var(--ink); border-color:var(--line);}
+  .btn-ghost:hover{border-color:var(--accent); background:var(--accent-tint); transform:translateY(-1px);}
+  .btn svg{width:16px; height:16px;}
+
+  .portrait{position:relative; justify-self:center; padding:10px 10px 0 0;}
+  .portrait img{
+    width:min(310px, 74vw); aspect-ratio:4/5; object-fit:cover; object-position:top;
+    border-radius:var(--radius);
+    filter:grayscale(1) contrast(1.02);
+    transition:filter .5s ease;
+  }
+  .portrait:hover img{filter:grayscale(0) contrast(1);}
+  .portrait::before{
+    content:""; position:absolute; top:0; right:0; width:66%; height:82%;
+    border:1px solid var(--accent); border-radius:var(--radius); z-index:-1;
+  }
+  .loc{display:inline-flex; align-items:center; gap:8px; margin-top:22px; font-size:13.5px; color:var(--muted); font-family:var(--mono);}
+  .loc svg{width:14px; height:14px; color:var(--accent);}
+
+  /* ---------- Section shell ---------- */
+  section{padding:98px 0; border-top:1px solid var(--line);}
+  .section-head{max-width:62ch; margin-bottom:54px;}
+  .section-head h2{font-size:clamp(1.85rem, 3.5vw, 2.5rem);}
+  .section-head h2 em{font-style:italic; color:var(--accent);}
+  .section-head p{margin-top:16px; color:var(--ink-soft); font-size:1.02rem;}
+
+  /* ---------- Quién soy ---------- */
+  .about-grid{display:grid; grid-template-columns:1.5fr 1fr; gap:56px;}
+  .about-body p + p{margin-top:18px;}
+  .about-body p{color:var(--ink-soft);}
+  .about-body .pull{
+    font-family:var(--serif); font-size:1.35rem; line-height:1.4; color:var(--ink);
+    border-left:2px solid var(--accent); padding-left:22px; margin:26px 0;
+  }
+  .about-body .pull em{font-style:italic;}
+  .facts{
+    background:var(--paper-2); border:1px solid var(--line); border-radius:var(--radius);
+    padding:30px 30px; align-self:start;
+  }
+  .facts dl{margin:0; display:grid; gap:20px;}
+  .facts dt{
+    font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--ink-soft); margin-bottom:5px;
+  }
+  .facts dd{margin:0; font-size:15px; color:var(--ink); line-height:1.55;}
+
+  /* ---------- Áreas ---------- */
+  .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:28px 24px; box-shadow:var(--shadow);
+    transition:transform .18s ease, border-color .2s ease;
+  }
+  .card:hover{transform:translateY(-3px); border-color:var(--accent);}
+  .card .ico{
+    width:42px; height:42px; border-radius:9px; background:var(--accent-tint);
+    display:flex; align-items:center; justify-content:center; margin-bottom:18px;
+  }
+  .card .ico svg{width:21px; height:21px; color:var(--accent);}
+  .card h3{font-size:1.16rem; margin-bottom:10px;}
+  .card p{font-size:14px; color:var(--ink-soft);}
+
+  /* ---------- Portafolio ---------- */
+  .projects{display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}
+  .project{
+    background:var(--card); border:1px solid var(--line); border-radius:var(--radius);
+    padding:32px 30px; box-shadow:var(--shadow); display:flex; flex-direction:column;
+    transition:transform .18s ease, border-color .2s ease;
+  }
+  .project:hover{transform:translateY(-3px); border-color:var(--accent);}
+  .tag{
+    align-self:flex-start; font-family:var(--mono); font-size:10.5px; font-weight:500; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--accent);
+    border:1px solid var(--line); border-radius:999px; padding:5px 12px; margin-bottom:18px;
+  }
+  .project h3{font-size:1.28rem; margin-bottom:12px;}
+  .project h3 em{font-style:italic;}
+  .project > p{font-size:14px; color:var(--ink-soft); flex:1;}
+  .metric{
+    margin-top:22px; padding-top:16px; border-top:1px solid var(--line);
+    font-family:var(--mono); font-size:12px; color:var(--muted); display:flex; align-items:flex-start; gap:9px;
+    letter-spacing:.01em;
+  }
+  .metric svg{width:14px; height:14px; color:var(--accent); flex-shrink:0; margin-top:2px;}
+
+  /* ---------- Experiencia ---------- */
+  .timeline{border-left:1px solid var(--line); margin-left:5px;}
+  .job{position:relative; padding:0 0 46px 34px;}
+  .job:last-child{padding-bottom:0;}
+  .job::before{
+    content:""; position:absolute; left:-5px; top:6px; width:9px; height:9px;
+    border-radius:50%; background:var(--accent);
+  }
+  .job .when{font-family:var(--mono); font-size:11.5px; font-weight:400; letter-spacing:.04em; color:var(--muted); text-transform:uppercase;}
+  .job h3{font-size:1.22rem; margin:9px 0 3px;}
+  .job .org{font-size:13.5px; color:var(--accent); font-weight:500; margin-bottom:12px;}
+  .job ul{margin:0; padding-left:18px; color:var(--ink-soft); font-size:14px;}
+  .job li{margin:6px 0;}
+
+  /* ---------- Formación ---------- */
+  .edu-grid{display:grid; grid-template-columns:1fr 1fr; gap:56px;}
+  .edu-list{display:grid; gap:24px;}
+  .edu-item h3{font-size:1.05rem; margin-bottom:3px;}
+  .edu-item .sub{font-size:13px; color:var(--muted); font-family:var(--mono); letter-spacing:.01em;}
+  .chips{display:flex; flex-wrap:wrap; gap:10px; margin-top:8px;}
+  .chip{
+    font-size:12.5px; border:1px solid var(--line); border-radius:999px;
+    padding:7px 14px; color:var(--ink-soft); background:var(--paper-2);
+  }
+  .edu-block + .edu-block{margin-top:38px;}
+  .edu-block > h4{
+    font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:20px;
+  }
+
+  /* ---------- Contacto ---------- */
+  #contacto{background:var(--band); color:var(--band-fg); border-top:none;}
+  #contacto .eyebrow{color:var(--band-accent);}
+  #contacto .eyebrow::before{background:var(--band-accent);}
+  #contacto .section-head h2{color:var(--band-fg);}
+  #contacto .section-head h2 em{color:var(--band-accent);}
+  #contacto .section-head p{color:var(--band-fg-dim);}
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:54px; align-items:start;}
+  .contact-list{display:grid; gap:2px;}
+  .contact-row{
+    display:flex; align-items:center; gap:16px; padding:20px 4px;
+    border-bottom:1px solid var(--band-line); text-decoration:none; color:var(--band-fg);
+    transition:padding-left .2s ease;
+  }
+  .contact-row:hover{padding-left:12px;}
+  .contact-row:last-child{border-bottom:none;}
+  .contact-row .ci{
+    width:40px; height:40px; border-radius:9px; flex-shrink:0;
+    background:var(--band-tint); display:flex; align-items:center; justify-content:center;
+  }
+  .contact-row .ci svg{width:18px; height:18px; color:var(--band-accent);}
+  .contact-row .lbl{font-family:var(--mono); font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--band-fg-dim);}
+  .contact-row .val{font-size:15px; font-weight:400;}
+  .contact-cta{
+    background:var(--band-tint); border:1px solid var(--band-line);
+    border-radius:var(--radius); padding:34px 32px;
+  }
+  .contact-cta h3{font-size:1.35rem; color:var(--band-fg); margin-bottom:12px;}
+  .contact-cta h3 em{font-style:italic; color:var(--band-accent);}
+  .contact-cta p{color:var(--band-fg-dim); font-size:14px; margin-bottom:24px;}
+  .contact-cta .btn-primary{border-color:var(--accent); width:100%; justify-content:center;}
+  .contact-cta .dl{margin-top:18px; margin-bottom:0; font-family:var(--mono); font-size:12.5px;}
+  .contact-cta .dl a{color:var(--band-fg); text-decoration:underline; text-underline-offset:3px;}
+
+  /* ---------- Footer ---------- */
+  footer.site{background:var(--band); color:var(--band-fg-dim); padding:34px 0 46px; border-top:1px solid var(--band-line);}
+  .foot{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; font-size:13px; font-family:var(--mono);}
+  .foot a{color:var(--band-fg-dim); text-decoration:none;}
+  .foot a:hover{color:var(--band-fg);}
+
+  /* ---------- Reveal (progressive enhancement: only hides when JS is active) ---------- */
+  .js .reveal{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;}
+  .js .reveal.in{opacity:1; transform:none;}
+  @media (prefers-reduced-motion: reduce){ .js .reveal{opacity:1; transform:none; transition:none;} }
+
+  /* ---------- Focus ---------- */
+  a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px;}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px){
+    .hero-grid{grid-template-columns:1fr; gap:44px;}
+    .portrait{order:-1; justify-self:start;}
+    .about-grid{grid-template-columns:1fr; gap:36px;}
+    .cards{grid-template-columns:1fr 1fr;}
+    .edu-grid{grid-template-columns:1fr; gap:40px;}
+    .contact-grid{grid-template-columns:1fr; gap:36px;}
+  }
+  @media (max-width: 640px){
+    body{font-size:16px;}
+    .nav-links, .nav > .nav-cta{display:none;}
+    .menu-btn{display:flex;}
+    .nav-links.open{
+      display:flex; position:absolute; top:72px; left:0; right:0;
+      flex-direction:column; gap:0; background:var(--paper);
+      border-bottom:1px solid var(--line); padding:8px 28px 20px;
+    }
+    .nav-links.open a{padding:14px 0; border-bottom:1px solid var(--line); font-size:16px;}
+    .nav-links.open a::after{display:none;}
+    section{padding:70px 0;}
+    .hero{padding:56px 0 54px;}
+    .cards, .projects{grid-template-columns:1fr;}
+    .foot{flex-direction:column; text-align:center;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site" id="top">
+  <div class="wrap nav">
+    <a href="#top" class="brand">Gabriela <em>Cabrera</em></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#quien-soy">¿Quién soy?</a>
+      <a href="#areas">Especialización</a>
+      <a href="#portafolio">Portafolio</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a href="#contacto" class="nav-cta">Contactar</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" style="border-top:none;">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <p class="role">Comunicación Corporativa · <b>Cultura Organizacional</b> · Experiencia del Colaborador</p>
+        <h1>Conecto a las personas con el <em>propósito</em> del negocio.</h1>
+        <p class="lede">
+          Soy Gabriela Cabrera, profesional en Comunicación Corporativa con más de cuatro años
+          diseñando y liderando estrategias de Comunicación Interna, Cultura Organizacional y
+          Desarrollo Organizacional en entornos dinámicos.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#portafolio">
+            Ver portafolio
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="assets/CV-Gabriela-Cabrera-ES.pdf" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+            Descargar CV
+          </a>
+        </div>
+        <span class="loc">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          Barcelona, España &nbsp;/&nbsp; Lima, Perú
+        </span>
+      </div>
+      <div class="portrait reveal">
+        <img src="assets/gabriela-cabrera.jpg" alt="Retrato de Gabriela Cabrera" width="310" height="388" />
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIÉN SOY -->
+  <section id="quien-soy">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">¿Quién soy?</p>
+        <h2>Comunicación con intención, <em>cultura con evidencia</em>.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-body reveal">
+          <p>
+            Trabajo en la intersección entre las personas y la estrategia. A lo largo de mi
+            trayectoria he acompañado a organizaciones financieras y de servicios en el diseño de
+            planes de Comunicación Interna, programas de Cultura Organizacional e iniciativas de
+            Experiencia del Colaborador, siempre alineados con los objetivos del negocio.
+          </p>
+          <p class="pull">
+            Traduzco prioridades estratégicas en mensajes, rituales y experiencias que las personas
+            <em>entienden y adoptan</em>.
+          </p>
+          <p>
+            Me especializo en coordinar proyectos transversales y articular a múltiples grupos de
+            interés. Complemento la práctica con la medición: clima, alcance, enganche y adopción son
+            parte de cómo defino el éxito de cada iniciativa.
+          </p>
+          <p>
+            Mi formación en Comunicación Corporativa se amplía con estudios de posgrado en Gestión
+            Empresarial y Negocios Internacionales, lo que me permite aportar una mirada
+            multidisciplinaria a los desafíos organizacionales.
+          </p>
+        </div>
+        <aside class="facts reveal">
+          <dl>
+            <div>
+              <dt>Ubicación</dt>
+              <dd>Barcelona, España · Lima, Perú</dd>
+            </div>
+            <div>
+              <dt>Idiomas</dt>
+              <dd>Español (nativo) · Inglés C1</dd>
+            </div>
+            <div>
+              <dt>Enfoque</dt>
+              <dd>Gestión del cambio · Gestión de stakeholders · Mejora de procesos</dd>
+            </div>
+            <div>
+              <dt>Herramientas</dt>
+              <dd>Microsoft 365 · Google Workspace · LMS · Canva · Adobe Creative Suite · Herramientas de IA</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÁREAS DE ESPECIALIZACIÓN -->
+  <section id="areas">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Áreas de especialización</p>
+        <h2>Cómo puedo <em>aportar valor</em></h2>
+        <p>Capacidades que he desarrollado liderando iniciativas end-to-end, desde el diagnóstico hasta la medición del impacto.</p>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H8l-4 4V5Z"/></svg></div>
+          <h3>Comunicación Interna Estratégica</h3>
+          <p>Planes anuales, campañas, gestión de canales y narrativa corporativa alineada con los objetivos del negocio.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5.5 20a6.5 6.5 0 0 1 13 0"/><path d="M19 10.5c1.6.8 2.7 2.4 2.7 4.3M5 10.5C3.4 11.3 2.3 12.9 2.3 14.8"/></svg></div>
+          <h3>Cultura Organizacional</h3>
+          <p>Programas de propósito, valores y rituales que fortalecen la identidad y el sentido de pertenencia.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 12.2A8.8 8.8 0 1 1 11.8 3.2"/><path d="M21 5.5 12 14.5l-3-3"/></svg></div>
+          <h3>Experiencia del Colaborador</h3>
+          <p>Iniciativas que acompañan el ciclo de vida del colaborador y elevan el compromiso en cada punto de contacto.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15.5-6.2M21 12a9 9 0 0 1-15.5 6.2"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></div>
+          <h3>Gestión del Cambio</h3>
+          <p>Acompañamiento a líderes y equipos en la adopción de nuevas formas de trabajo y prioridades estratégicas.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.5"/></svg></div>
+          <h3>Aprendizaje y Desarrollo</h3>
+          <p>Diseño instruccional y programas de formación que estandarizan conocimiento y cierran brechas de competencias.</p>
+        </article>
+        <article class="card reveal">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V7l8-4 8 4v14"/><path d="M9 21v-6h6v6M9 10h.01M15 10h.01"/></svg></div>
+          <h3>Marca Empleadora</h3>
+          <p>Propuesta de valor al colaborador y contenidos que proyectan la cultura hacia dentro y hacia fuera.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTAFOLIO -->
+  <section id="portafolio">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Portafolio</p>
+        <h2>Proyectos <em>seleccionados</em></h2>
+        <p>Una muestra de iniciativas que lideré o coordiné, con foco en el diseño, la ejecución transversal y el resultado medible.</p>
+      </div>
+      <div class="projects">
+
+        <article class="project reveal">
+          <span class="tag">Cultura de innovación</span>
+          <h3>Innovatón Los Andes 2023</h3>
+          <p>
+            Diseño y coordinación del primer evento de innovación abierta de la organización:
+            metodología Human-Centered Design, capacitaciones, reuniones de mentoría, jornada de
+            pitch ante el Consejo de Gerencia y continuidad del proyecto ganador con las áreas
+            involucradas.
+          </p>
+          <div class="metric">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 17l6-6 4 4 8-8"/></svg>
+            12 proyectos finalistas · equipos multi-gerencia a nivel nacional
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <span class="tag">Plan estratégico</span>
+          <h3><em>«Nueva Brújula»</em> — Activación del plan estratégico</h3>
+          <p>
+            Estrategia de comunicación y activación del nuevo plan estratégico corporativo: propósito,
+            visión, principios y pilares traducidos a mensajes, piezas y experiencias comprensibles
+            para toda la organización, con foco en el alineamiento del liderazgo.
+          </p>
+          <div class="metric">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 17l6-6 4 4 8-8"/></svg>
+            Despliegue nacional · narrativa única de principios y pilares
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <span class="tag">Clima &amp; escucha</span>
+          <h3>Medición de Clima Organizacional</h3>
+          <p>
+            Gestión de la encuesta anual de clima: comunicación de la campaña, análisis de resultados
+            por región y por gerencia, y construcción de planes de acción junto con Talento Humano y
+            los líderes de cada área.
+          </p>
+          <div class="metric">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 17l6-6 4 4 8-8"/></svg>
+            86% de participación · planes de acción por gerencia
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <span class="tag">Programa de cultura</span>
+          <h3>Comunidad Andesina — Cultura y engagement</h3>
+          <p>
+            Iniciativas transversales de valores, reconocimiento y espacios de conversación con el
+            liderazgo (como los Desayunos Culturales) para fortalecer la cultura y recoger la voz de
+            los colaboradores en oficinas de todo el país.
+          </p>
+          <div class="metric">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 17l6-6 4 4 8-8"/></svg>
+            30 iniciativas de engagement · 13 talleres de liderazgo
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <span class="tag">Medición</span>
+          <h3>Indicadores de Comunicación Interna</h3>
+          <p>
+            Modelo de medición de alcance y enganche por canal y tipo de contenido, con lectura de
+            resultados y recomendaciones para simplificar formatos, fragmentar contenidos en
+            carruseles y aumentar la lectura efectiva.
+          </p>
+          <div class="metric">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 17l6-6 4 4 8-8"/></svg>
+            +12 puntos porcentuales de alcance del boletín interno
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <span class="tag">Formación</span>
+          <h3>Escuela de Negocios — Formación comercial</h3>
+          <p>
+            Diseño instruccional de programas de formación comercial junto a especialistas de negocio,
+            para estandarizar conocimiento, fortalecer capacidades y potenciar el desempeño de la
+            fuerza comercial.
+          </p>
+          <div class="metric">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 17l6-6 4 4 8-8"/></svg>
+            27 programas diseñados · +500 colaboradores alcanzados
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section id="experiencia">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Experiencia</p>
+        <h2>Trayectoria <em>profesional</em></h2>
+      </div>
+      <div class="timeline">
+        <div class="job reveal">
+          <p class="when">Marzo 2023 – Mayo 2024 · Lima, Perú</p>
+          <h3>Analista de Comunicación Interna y Cultura</h3>
+          <p class="org">Caja Los Andes</p>
+          <ul>
+            <li>Lideré la planificación, ejecución y seguimiento del Plan Anual de Comunicación Interna y Cultura Organizacional, con 30 iniciativas de engagement basadas en gamificación y 13 talleres de liderazgo.</li>
+            <li>Diseñé estrategias de comunicación interna y marca empleadora alineadas con los objetivos estratégicos de la organización.</li>
+            <li>Coordiné proyectos transversales junto a líderes de distintas áreas, promoviendo la colaboración y la adopción de iniciativas.</li>
+            <li>Gestioné la planificación presupuestaria del área asegurando una ejecución eficiente.</li>
+          </ul>
+        </div>
+        <div class="job reveal">
+          <p class="when">Abril 2021 – Marzo 2023 · Lima, Perú</p>
+          <h3>Asistente de Aprendizaje y Experiencia del Colaborador</h3>
+          <p class="org">Caja Los Andes</p>
+          <ul>
+            <li>Diseñé e implementé iniciativas de aprendizaje y desarrollo que beneficiaron a más de 500 colaboradores.</li>
+            <li>Gestioné el diseño instruccional de 27 programas de formación comercial para la Escuela de Negocios.</li>
+            <li>Coordiné iniciativas que integraron comunicación, aprendizaje y experiencia del colaborador.</li>
+            <li>Establecí y gestioné 15 alianzas estratégicas con organizaciones de sectores financiero, educativo, salud y entretenimiento.</li>
+          </ul>
+        </div>
+        <div class="job reveal">
+          <p class="when">Enero 2020 – Abril 2021 · Lima, Perú</p>
+          <h3>Practicante de Comunicación Interna y Cultura</h3>
+          <p class="org">Grupo Centenario</p>
+          <ul>
+            <li>Brindé soporte en la ejecución del plan anual de Comunicación Interna y Cultura Organizacional.</li>
+            <li>Diseñé campañas de comunicación interna y contenidos estratégicos para promover la identidad corporativa.</li>
+            <li>Colaboré con equipos multidisciplinarios en actividades de clima laboral y experiencia del colaborador.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMACIÓN -->
+  <section id="formacion">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Formación y certificaciones</p>
+        <h2>Base <em>académica</em></h2>
+      </div>
+      <div class="edu-grid">
+        <div class="reveal">
+          <div class="edu-block">
+            <h4>Educación</h4>
+            <div class="edu-list">
+              <div class="edu-item">
+                <h3>Maestría en Negocios Internacionales</h3>
+                <p class="sub">UPF Barcelona School of Management · Barcelona · 2025–2026</p>
+              </div>
+              <div class="edu-item">
+                <h3>Maestría en Gestión Empresarial</h3>
+                <p class="sub">ESAN Graduate School of Business · Lima · 2024–2025</p>
+              </div>
+              <div class="edu-item">
+                <h3>Licenciatura en Comunicación Corporativa</h3>
+                <p class="sub">Universidad de Lima · Lima · 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="edu-block">
+            <h4>Certificaciones</h4>
+            <div class="chips">
+              <span class="chip">Diseño Conductual · 2025</span>
+              <span class="chip">Gestión Empresarial Sostenible · 2025</span>
+              <span class="chip">Análisis de Negocios y Gestión de Procesos · 2024</span>
+              <span class="chip">Gestión de Proyectos de Desarrollo · 2024</span>
+            </div>
+          </div>
+          <div class="edu-block">
+            <h4>Competencias clave</h4>
+            <div class="chips">
+              <span class="chip">Gestión de Proyectos</span>
+              <span class="chip">Mejora de Procesos</span>
+              <span class="chip">Comunicación Estratégica</span>
+              <span class="chip">Desarrollo Organizacional</span>
+              <span class="chip">Gestión de Stakeholders</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Contacto</p>
+        <h2>Conversemos</h2>
+        <p>¿Tienes un reto de comunicación interna, cultura o experiencia del colaborador? Escríbeme y encontramos la mejor forma de abordarlo.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-list reveal">
+          <a class="contact-row" href="mailto:gcabrerayero@gmail.com">
+            <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+            <span><span class="lbl">Email</span><br><span class="val">gcabrerayero@gmail.com</span></span>
+          </a>
+          <a class="contact-row" href="tel:+34625972362">
+            <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5c0 9 6 15 15 15l-2-4-4-1-2 2a12 12 0 0 1-5-5l2-2-1-4-3-2Z"/></svg></span>
+            <span><span class="lbl">Teléfono</span><br><span class="val">+34 625 97 23 62</span></span>
+          </a>
+          <a class="contact-row" href="https://www.linkedin.com/in/gmcy" target="_blank" rel="noopener">
+            <span class="ci"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM3 8.5h3.87V21H3V8.5Zm6.34 0h3.7v1.71h.05c.52-.98 1.8-2.02 3.7-2.02 3.96 0 4.69 2.6 4.69 5.98V21h-3.87v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9.34V8.5Z"/></svg></span>
+            <span><span class="lbl">LinkedIn</span><br><span class="val">linkedin.com/in/gmcy</span></span>
+          </a>
+          <div class="contact-row" style="cursor:default;">
+            <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <span><span class="lbl">Ubicación</span><br><span class="val">Barcelona, España</span></span>
+          </div>
+        </div>
+        <div class="contact-cta reveal">
+          <h3>¿Trabajamos <em>juntos</em>?</h3>
+          <p>Disponible para proyectos y colaboraciones en comunicación interna, cultura organizacional y gestión del cambio.</p>
+          <a class="btn btn-primary" href="mailto:gcabrerayero@gmail.com?subject=Contacto%20desde%20tu%20portafolio">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            Escríbeme un correo
+          </a>
+          <p class="dl">
+            <a href="assets/CV-Gabriela-Cabrera-ES.pdf" download>Descargar CV (ES)</a>
+            &nbsp;·&nbsp;
+            <a href="assets/CV-Gabriela-Cabrera-EN.pdf" download>Download CV (EN)</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap foot">
+    <span>© <span id="year">2026</span> Gabriela Cabrera · Comunicación &amp; Cultura</span>
+    <span><a href="#top">Volver arriba ↑</a></span>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    var header = document.querySelector('header.site');
+    var onScroll = function(){ header.classList.toggle('scrolled', window.scrollY > 8); };
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive:true});
+
+    var btn = document.getElementById('menuBtn');
+    var links = document.getElementById('navLinks');
+    btn.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    links.addEventListener('click', function(e){
+      if (e.target.tagName === 'A') { links.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+    });
+
+    var els = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+      els.forEach(function(el){ io.observe(el); });
+    } else {
+      els.forEach(function(el){ el.classList.add('in'); });
+    }
+  })();
+</script>
+
+</body>
+</html>
